@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StarComponent } from './star/star.component';
+import { StarGSComponent } from './star/star.component';
 import { FormsModule } from '@angular/forms';
+import { ConvertToSpacesGSPipe } from './pipes/convert-to-spaces-pipe';
 
 
 
 @NgModule({
   declarations: [
-    StarComponent
+    StarGSComponent,
+    ConvertToSpacesGSPipe
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    StarComponent,
+    StarGSComponent,
+    ConvertToSpacesGSPipe,
     CommonModule,
     FormsModule
   ]
 })
-export class SharedModule { }
+export class SharedGSModule { }

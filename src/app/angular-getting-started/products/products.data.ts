@@ -7,7 +7,7 @@ export const PRODUCTS: Array<any> = [
     description: '15 gallon capacity rolling garden cart',
     price: 32.99,
     starRating: 4.2,
-    imageUrl: 'assets/images/garden_cart.png'
+    imageUrl: 'assets/getting-started-images/garden_cart.png'
   },
   {
     productId: 5,
@@ -17,7 +17,7 @@ export const PRODUCTS: Array<any> = [
     description: 'Curved claw steel hammer',
     price: 8.9,
     starRating: 4.8,
-    imageUrl: 'assets/images/hammer.png'
+    imageUrl: 'assets/getting-started-images/hammer.png'
   },
 ];
 

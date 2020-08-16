@@ -7,7 +7,7 @@ import { ProductService } from './product.service';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
-export class ProductListComponent implements OnInit{
+export class ProductListGSComponent implements OnInit{
 
   public pageTitle: string;
   public imageWidth: number;

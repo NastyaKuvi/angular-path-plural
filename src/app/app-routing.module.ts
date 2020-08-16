@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProductListComponent } from './products/product-list.component';
-import { ProductDetailComponent } from './products/product-detail.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductDetailGuard } from './products/product-detail.guard';
+import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 
 
 const routes: Routes = [
   {
-    path: 'welcome',
-    component: WelcomeComponent,
+    path: 'main',
+    component: MainNavigationComponent,
   },
   {
     path: '',
-    redirectTo: 'welcome',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
   {
