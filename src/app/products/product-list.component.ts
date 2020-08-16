@@ -42,6 +42,10 @@ export class ProductListComponent implements OnInit{
     this.isShowImage = !this.isShowImage;
   }
 
+  onRatingClicked(message: string): void {
+    this.pageTitle =  `Product List: ${message}`;
+  }
+
   private _performFilterProducts() {
     return this.products.filter(
       (product: IProduct) => product.productName.toLowerCase().includes(this.listFilter.toLowerCase()));
