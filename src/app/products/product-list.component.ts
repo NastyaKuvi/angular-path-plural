@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit{
   public isShowImage: boolean;
   public products: Array<IProduct>;
   public filteredProducts: Array<IProduct>;
+  public errorMessage: string;
 
   private _listFilter: string;
   get listFilter(): string {
@@ -37,8 +38,17 @@ export class ProductListComponent implements OnInit{
     }
 
   ngOnInit(): void {
-    this.products = new Array<any>(...this._productService.getProducts());
-    this.filteredProducts = this.products;
+    this._productService.getProducts().subscribe((data: Array<IProduct>) => {
+      this.products = data;
+      this.filteredProducts = this.products;
+    });
+    this._productService.getProducts().subscribe({
+      next: data => {
+        this.products = data;
+        this.filteredProducts = this.products;
+      },
+      error: err => this.errorMessage = err
+    });
   }
 
   onShowImageClick(): void {
