@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PRODUCTS } from './products.data';
 import { IProduct } from './product';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'pm-product-list',
@@ -25,17 +26,19 @@ export class ProductListComponent implements OnInit{
     this.filteredProducts = this.listFilter ? this._performFilterProducts() : this.products;
   }
 
-  constructor() {
+  constructor(
+    private _productService: ProductService
+  ) {
     this.pageTitle = 'Product List';
     this.imageWidth = 50;
     this.imageMargin = 2;
     this.isShowImage = false;
-    this.products = new Array<any>(...PRODUCTS);
-    this.filteredProducts = this.products;
-    this.listFilter = 'cart';
-  }
+    this.listFilter = '';
+    }
 
   ngOnInit(): void {
+    this.products = new Array<any>(...this._productService.getProducts());
+    this.filteredProducts = this.products;
   }
 
   onShowImageClick(): void {
