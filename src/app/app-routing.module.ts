@@ -4,6 +4,7 @@ import { ProductListComponent } from './products/product-list.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductDetailGuard } from './products/product-detail.guard';
 
 
 const routes: Routes = [
@@ -13,11 +14,14 @@ const routes: Routes = [
   },
   {
     path: 'products/:id',
-    component: ProductDetailComponent
+    component: ProductDetailComponent,
+    canActivate: [
+      ProductDetailGuard
+    ]
   },
   {
     path: 'welcome',
-    component: WelcomeComponent
+    component: WelcomeComponent,
   },
   {
     path: '',
