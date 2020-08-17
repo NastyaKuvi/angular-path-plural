@@ -21,14 +21,16 @@
       "attribute",
       "app",
       "camelCase",
-      "gs"
+      "gs",
+      "af"
     ],
     "component-selector": [
       true,
       "element",
       "app",
       "kebab-case",
-      "gs"
+      "gs",
+      "af"
     ],
     "eofline": true,
     "import-blacklist": [

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainNavigationComponent } from './main-navigation.component';
 import { MainNavigationRoutingModule } from './main-navigation-routing.module';
 import { GettingStartedModule } from '../angular-getting-started/getting-started.module';
+import { AngularFormsModule } from '../angular-forms/angular-forms.module';
 
 
 
@@ -13,6 +14,7 @@ import { GettingStartedModule } from '../angular-getting-started/getting-started
   imports: [
     CommonModule,
     GettingStartedModule,
+    AngularFormsModule,
     MainNavigationRoutingModule
   ],
   exports:[
