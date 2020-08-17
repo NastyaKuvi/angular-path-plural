@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule
   ],
-  exports:[
+  exports: [
     AngularFormsComponent
   ]
 })

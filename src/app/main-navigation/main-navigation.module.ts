@@ -17,7 +17,7 @@ import { AngularFormsModule } from '../angular-forms/angular-forms.module';
     AngularFormsModule,
     MainNavigationRoutingModule
   ],
-  exports:[
+  exports: [
     MainNavigationComponent
   ]
 })
